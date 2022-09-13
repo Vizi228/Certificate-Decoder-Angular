@@ -1,0 +1,17 @@
+<app-certificate-list 
+  [certificates]="certificates" 
+  (setCertificate)="setItem($event)" 
+  [activeItem]="activeItem"
+  [setIsActiveArea]="setIsActiveArea.bind(this)"
+  [isActiveArea]="isActiveArea"
+  >
+</app-certificate-list>
+<app-certificate-area 
+  [activeItem]="activeItem" 
+  [certificateInfo]="certificates[activeItem]"
+  [isActiveArea]="isActiveArea"
+  [certificates]="certificates"
+  [setItem]="setItem.bind(this)"
+  (addCertificates)="addCertificates($event)"
+>
+</app-certificate-area>

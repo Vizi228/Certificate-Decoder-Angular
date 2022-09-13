@@ -1,0 +1,26 @@
+.wrapper {
+  overflow: auto;
+  max-height: 300px;
+}
+.button {
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-top: 10px;
+}
+app-certificate-item{
+  position: relative;
+}
+app-certificate-item.active::after {
+  content: '';
+  background-image: url('https://raw.githubusercontent.com/Vizi228/CertificateDecoder-test/master/src/assets/images/right-arrow.png');
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-size: cover;
+  right: 10px;
+  top: 12px;
+}

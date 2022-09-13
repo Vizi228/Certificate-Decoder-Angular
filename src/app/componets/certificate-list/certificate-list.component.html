@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-certificate-item 
+    *ngFor="let certificate of certificates; let id = index" 
+    [certificateItem]="certificate"
+    [ngClass]="activeItem === id ? 'active' : '' "
+    (click)="onClickItem(id)"
+    >
+  </app-certificate-item>
+</div>
+<button (click)="onClickButton()" class="button">{{ isActiveArea ? 'Скасувати' : 'Додати' }}</button>

@@ -1,0 +1,22 @@
+<div class="drop-area" 
+  (drop)="onDrop($event)" 
+  (dragstart)="onStart($event)" 
+  (dragover)="onStart($event)" 
+  (dragleave)="onLeave($event)" 
+  draggable="true"
+  >
+  <div *ngIf="isActiveArea"><p>{{ isActiveArea ? 'Перетяніть сертифікат сюди' : '1233' }}</p></div>
+  <div *ngIf="!isActiveArea">
+    <div *ngIf="activeItem >= 0">
+      <p>Common Name: {{ certificateInfo.commonName }}</p>
+      <p>Issuer Cn: {{ certificateInfo.issuerCn }}</p>
+      <p>Valid From: {{ certificateInfo.validFrom }}</p>
+      <p>Valid Till: {{ certificateInfo.validTill }}</p>
+      
+      
+    </div>
+    <div *ngIf="activeItem < 0">
+      Виберіть сертифікат, щоб переглянути інформацію
+    </div>
+  </div>
+</div>
